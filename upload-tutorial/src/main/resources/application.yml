@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: file-upload
+
+  main:
+    web-application-type: servlet
+
+  mvc:
+    async:
+      request-timeout: -1
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+      enabled: true
+      file-size-threshold: 1MB
+      location: ${java.io.tmpdir}
